@@ -1,17 +1,16 @@
-/* #buy-now-btn{
-position: fixed;
-bottom: 197px;
-right:30px;
-z-index: 1000000;
-} */
+
 #buy-now-btn{
 position: fixed;
 z-index: 1000000;
 }
 
+/* #buy-now-btn:hover{
+  opacity:100 !important;
+} */
+
 .entry {
 	bottom: 197px;
-	right: 30px;
+	right: 29px;
 }
 
 .scroll {
