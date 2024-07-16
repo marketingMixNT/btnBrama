@@ -1,3 +1,6 @@
+
+
+
 .btn-link {
 	text-decoration: none;
 	color: black;
@@ -34,15 +37,20 @@
 
 .buy-now-btn {
 	
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	align-items: center;
+	
 	gap: 5px;
 	background-color: white;
 	border-radius: 50%;
 	border: 2px solid #80808080;
 	animation: bounce 1s infinite;
+}
+
+.btn-link{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	gap:10px
 }
 
 .btn--entry {
@@ -59,7 +67,7 @@
 	width: 55px;
 }
 .btn--entry span {
-	font-size: 17px;
+	font-size: 25px;
 	text-transform: uppercase;
 }
 
@@ -74,7 +82,7 @@
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	gap:0px
+	line-height: .9;
 }
 
 
@@ -87,7 +95,7 @@
 }
 
 @media (max-width: 1200px) {
-	.container {
+	.container-btn {
 		display: none;
 	}
 }
