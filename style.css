@@ -1,12 +1,18 @@
 
+@keyframes bounce {
+	0%, 100% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-7px);
+	}}
+
+
 #buy-now-btn{
 position: fixed;
-z-index: 1000000;
+z-index: 99;
+animation: bounce 1s infinite;
 }
-
-/* #buy-now-btn:hover{
-  opacity:100 !important;
-} */
 
 .entry {
 	bottom: 197px;
