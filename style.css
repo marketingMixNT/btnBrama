@@ -1,32 +1,42 @@
-
 @keyframes bounce {
-	0%, 100% {
-	  transform: translateY(0);
+	0%,
+	100% {
+		transform: translateY(0);
 	}
 	50% {
-	  transform: translateY(-7px);
-	}}
+		transform: translateY(-7px);
+	}
+}
 
+.bounce {
+	animation: bounce 1s infinite;
+}
 
-#buy-now-btn{
-position: fixed;
-z-index: 99;
-animation: bounce 1s infinite;
+#buy-now-btn {
+	position: fixed;
+	z-index: 99;
+	animation: bounce 1s infinite;
 }
 
 .entry {
 	bottom: 197px;
-	right: 29px;
+	right: 28px;
 }
 
 .scroll {
 	bottom: 110px;
-	right: 28px;
+	right: 27px;
 }
 
 #icon--big {
 	width: 140px;
 }
 #icon--small {
-	width: 70px;
+	width: 59px;
+}
+
+@media (max-width: 1200px) {
+	#buy-now-btn {
+		display: none;
+	}
 }
