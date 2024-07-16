@@ -46,26 +46,61 @@
         </div> -->
 
 
-    <div class="container">
-        <div id="buy-now-btn">
-            <a href=""><img id="icon--big"
-                    src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/d4e42bf82768ba30ffdd8a2e2741967c7eb55d01/kup-bilet.svg"
+
+    <div id="buy-now-btn" class="entry">
+        <a href=""><img id="icon--big"
+                src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/d4e42bf82768ba30ffdd8a2e2741967c7eb55d01/kup-bilet.svg"
+                alt="">
+            <a href=""><img id="icon--small"
+                    src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/d4e42bf82768ba30ffdd8a2e2741967c7eb55d01/kup-bilet-small.svg"
                     alt="">
-                <a href=""><img id="icon--small"
-                        src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/d4e42bf82768ba30ffdd8a2e2741967c7eb55d01/kup-bilet-small.svg"
-                        alt="">
-                </a>
-        </div>
-
-
-
-
+            </a>
     </div>
+
+
+    <script>
+        const btn = document.querySelector('#buy-now-btn')
+        const iconBig = document.querySelector("#icon--big");
+        const iconSmall = document.querySelector("#icon--small");
+
+        const checkScreenWidth = () => {
+            return window.innerWidth >= 1200;
+        }
+
+        const updateImageSize = () => {
+            if (checkScreenWidth()) {
+                if (window.scrollY > 100) {
+                    btn.classList.remove('entry')
+                    btn.classList.add('scroll')
+                    iconBig.style.display = "none";
+                    iconSmall.style.display = "flex";
+                } else {
+                    btn.classList.add('entry')
+                    btn.classList.remove('scroll')
+                    iconBig.style.display = "flex";
+                    iconSmall.style.display = "none";
+                }
+            } else {
+                iconBig.style.display = "none";
+                iconSmall.style.display = "none";
+            }
+        }
+
+
+
+        window.addEventListener("load", updateImageSize);
+        window.addEventListener("resize", updateImageSize);
+        window.addEventListener("scroll", updateImageSize);
+
+
+
+    </script>
+
 
 
 
     <!--TO NAD BODY-->
-    <script src="main.js"></script>
+    <!-- <script src="https://dm.mmhub.pl/main.js"></script> -->
 </body>
 
 </html>
