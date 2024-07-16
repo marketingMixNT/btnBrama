@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="hu">
 
 <head>
     <meta charset="UTF-8">
@@ -8,7 +8,7 @@
 
     <!--TO DO HEAD-->
     <link rel="stylesheet" href="style.css">
-  
+
 </head>
 
 <body style="position: relative; background-color: red;height:1500px">
@@ -27,7 +27,7 @@
                 <img src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/main/cart.png" alt="">
                 <div class="text-container ">
 
-                    <span class="lang-text--bold "></span><span class="lang-text"></span>
+                    <span class="lang-text--bold"></span><span class="lang-text"></span>
                 </div>
 
             </a>
@@ -47,11 +47,14 @@
         const lang = document.documentElement.lang;
         const langText = document.querySelector('.lang-text')
         const langTextBold = document.querySelector('.lang-text--bold')
+      
+
 
         switch (lang) {
             case 'en':
                 langTextBold.innerHTML = 'Buy';
                 langText.innerHTML = 'Now';
+               
                 break;
             case 'sk':
                 langTextBold.innerHTML = 'Kúpte';

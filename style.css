@@ -6,6 +6,10 @@
 	color: black;
 }
 
+.btn-link:hover{
+	color: black !important;
+}
+
 @keyframes bounce {
 	0%,
 	100% {
@@ -27,12 +31,12 @@
 
 .entry {
 	bottom: 197px;
-	right: 28px;
+	right: 29px;
 }
 
 .scroll {
 	bottom: 110px;
-	right: 27px;
+	right: 29px;
 }
 
 .buy-now-btn {
@@ -63,7 +67,7 @@
 }
 
 .btn--entry img {
-	margin-right: 5px;
+	margin-right: 6px;
 	width: 55px;
 }
 .btn--entry span {
@@ -75,6 +79,7 @@
 	font-size: 15px;
 	text-transform: uppercase;
 }
+
 
 .text-container{
 	display: flex;
