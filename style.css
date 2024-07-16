@@ -72,7 +72,7 @@
 }
 
 .btn--scroll span {
-	font-size: 11px;
+	font-size: 15px;
 	text-transform: uppercase;
 }
 
@@ -95,7 +95,7 @@
 }
 
 @media (max-width: 1200px) {
-	.container-btn {
+	.btn-container {
 		display: none;
 	}
 }
