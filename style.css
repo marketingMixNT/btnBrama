@@ -50,8 +50,8 @@ a {
 	height: 140px;
 }
 .btn--scroll {
-	width: 50px;
-	height: 50px;
+	width: 55px;
+	height: 55px;
 }
 
 .btn--entry img {
@@ -64,7 +64,7 @@ a {
 }
 
 .btn--scroll span {
-	font-size: 13px;
+	font-size: 11px;
 	text-transform: uppercase;
 }
 
