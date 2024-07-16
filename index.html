@@ -16,21 +16,66 @@
 
 
 
-    <div id="buy-now-btn" class="entry">
-        <a href="https://bramawgorce.com/kup-bilet"><img id="icon--big"
-                src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/26834dd89012df2fa38ec0ed3cc5499fb17eeef8/kup-bilet.svg"
-                alt="">
-            <a href="https://bramawgorce.com/kup-bilet"><img id="icon--small"
-                    src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/26834dd89012df2fa38ec0ed3cc5499fb17eeef8/kup-bilet--small.svg"
-                    alt="" style="display:none">
+
+
+
+
+
+    <div class="container entry">
+        <button class="buy-now-btn btn--entry">
+            <a href="https://bramawgorce.com/kup-bilet">
+                <img src="/cart.png" alt="">
+                <div class="text-container ">
+
+                    <span class="lang-text--bold "></span><span class="lang-text"></span>
+                </div>
+
             </a>
+        </button>
     </div>
 
 
+
+
+
+
+
+
+
     <script>
-        const btn = document.querySelector('#buy-now-btn')
-        const iconBig = document.querySelector("#icon--big");
-        const iconSmall = document.querySelector("#icon--small");
+
+        const lang = document.documentElement.lang;
+        const langText = document.querySelector('.lang-text')
+        const langTextBold = document.querySelector('.lang-text--bold')
+
+        switch (lang) {
+            case 'en':
+                langTextBold.innerHTML = 'Buy';
+                langText.innerHTML = 'Now';
+                break;
+            case 'sk':
+                langTextBold.innerHTML = 'Kúpte';
+                langText.innerHTML = 'teraz';
+                break;
+            case 'hu':
+                langTextBold.innerHTML = 'Vásárolj';
+                langText.innerHTML = 'most';
+                break;
+            case 'uk':
+                langTextBold.innerHTML = 'купити';
+                langText.innerHTML = 'зараз';
+                break;
+            default:
+                langTextBold.innerHTML = 'Kup ';
+                langText.innerHTML = 'Bilet';
+        }
+
+        const container = document.querySelector('.container')
+        const btn = document.querySelector('.buy-now-btn')
+        const icon = document.querySelector('.buy-now-btn img')
+        const text = document.querySelector('.buy-now-btn .text-container')
+        const btnBig = document.querySelector(".btn--big");
+        const btnSmall = document.querySelector(".btn--small");
 
         const checkScreenWidth = () => {
             return window.innerWidth >= 500;
@@ -39,26 +84,29 @@
         const updateImageSize = () => {
             if (checkScreenWidth()) {
                 if (window.scrollY > 100) {
-                    btn.classList.remove('entry')
-                    btn.classList.add('scroll')
-                    iconBig.style.display = "none";
-                    iconSmall.style.display = "flex";
+                    container.classList.remove('entry')
+                    container.classList.add('scroll')
+                    btn.classList.remove('btn--entry')
+                    btn.classList.add('btn--scroll')
+                    icon.classList.add('hidden')
+                    text.classList.add('text-scroll')
+
                 } else {
-                    btn.classList.add('entry')
-                    btn.classList.remove('scroll')
-                    iconBig.style.display = "flex";
-                    iconSmall.style.display = "none";
+                    container.classList.add('entry')
+                    container.classList.remove('scroll')
+                    btn.classList.add('btn--entry')
+                    btn.classList.remove('btn--scroll')
+                    icon.classList.remove('hidden')
+                    text.classList.add('remove')
+
                 }
             }
         }
 
 
-
         window.addEventListener("load", updateImageSize);
         window.addEventListener("resize", updateImageSize);
         window.addEventListener("scroll", updateImageSize);
-
-
 
     </script>
 

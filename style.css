@@ -1,3 +1,8 @@
+a {
+	text-decoration: none;
+	color: black;
+}
+
 @keyframes bounce {
 	0%,
 	100% {
@@ -11,8 +16,7 @@
 .bounce {
 	animation: bounce 1s infinite;
 }
-
-#buy-now-btn {
+.container {
 	position: fixed;
 	z-index: 99;
 	animation: bounce 1s infinite;
@@ -28,15 +32,62 @@
 	right: 27px;
 }
 
-#icon--big {
-	width: 140px;
+.buy-now-btn {
+	
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	gap: 5px;
+	background-color: white;
+	border-radius: 50%;
+	border: 2px solid #80808080;
+	animation: bounce 1s infinite;
 }
-#icon--small {
-	width: 59px;
+
+.btn--entry {
+	width: 140px;
+	height: 140px;
+}
+.btn--scroll {
+	width: 50px;
+	height: 50px;
+}
+
+.btn--entry img {
+	margin-right: 5px;
+	width: 55px;
+}
+.btn--entry span {
+	font-size: 17px;
+	text-transform: uppercase;
+}
+
+.btn--scroll span {
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.text-container{
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	gap:0px
+}
+
+
+.lang-text--bold {
+	font-weight: bolder;
+}
+
+.hidden {
+	display: none;
 }
 
 @media (max-width: 1200px) {
-	#buy-now-btn {
+	.container {
 		display: none;
 	}
 }
