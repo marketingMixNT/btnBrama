@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="hu">
+<html lang="pl">
 
 <head>
     <meta charset="UTF-8">
@@ -34,6 +34,19 @@
         </button>
     </div>
 
+    <div class="btn-container entry--second">
+        <button class="buy-now-btn btn--entry btn--entry--second">
+            <a class="btn-link" href="https://bramawgorce.com/kup-bilet">
+                <img src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/main/cart.png" alt="">
+                <div class="text-container ">
+
+                    <span class="lang-text--bold--second"></span><span class="lang-text--second"></span>
+                </div>
+
+            </a>
+        </button>
+    </div>
+
 
 
 
@@ -47,6 +60,8 @@
         const lang = document.documentElement.lang;
         const langText = document.querySelector('.lang-text')
         const langTextBold = document.querySelector('.lang-text--bold')
+        const langTextSecond = document.querySelector('.lang-text--second')
+        const langTextBoldSecond = document.querySelector('.lang-text--bold--second')
       
 
 
@@ -54,23 +69,41 @@
             case 'en':
                 langTextBold.innerHTML = 'Buy';
                 langText.innerHTML = 'Now';
+
+                langTextBoldSecond.innerHTML = 'Group';
+                langTextSecond.innerHTML = 'Tickets';
                
                 break;
             case 'sk':
                 langTextBold.innerHTML = 'Kúpte';
                 langText.innerHTML = 'teraz';
+
+                langTextBoldSecond.innerHTML = 'Skupinové';
+                langTextSecond.innerHTML = 'lístky';
+
                 break;
             case 'hu':
                 langTextBold.innerHTML = 'Vásárolj';
                 langText.innerHTML = 'most';
+
+                langTextBoldSecond.innerHTML = 'Csoportos';
+                langTextSecond.innerHTML = 'jegyek';
+
                 break;
             case 'uk':
                 langTextBold.innerHTML = 'купити';
                 langText.innerHTML = 'зараз';
+
+                langTextBoldSecond.innerHTML = 'Групові';
+                langTextSecond.innerHTML = 'квитки';
+
                 break;
             default:
-                langTextBold.innerHTML = 'Kup ';
-                langText.innerHTML = 'Bilet';
+                langTextBold.innerHTML = 'Kup';
+                langText.innerHTML = 'Teraz';
+
+                langTextBoldSecond.innerHTML = 'Bilety';
+                langTextSecond.innerHTML = 'Grupowe';
         }
 
         const container = document.querySelector('.btn-container')
