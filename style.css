@@ -44,6 +44,11 @@
 	right: 29px;
 }
 
+.scroll--second {
+	bottom: 180px;
+	right: 29px;
+}
+
 .buy-now-btn {
 	
 	
@@ -70,9 +75,16 @@
 	width: 55px;
 	height: 55px;
 }
+.btn--entry--second {
+	width: 140px;
+	height: 140px;
+}
+.btn--scroll--second {
+	width: 55px;
+	height: 55px;
+}
 
 .btn--entry img {
-	margin-right: 6px;
 	width: 55px;
 }
 .btn--entry span {
@@ -86,7 +98,12 @@
 }
 
 .btn--scroll span {
-	font-size: 15px;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+
+.btn--scroll--second span {
+	font-size: 9px;
 	text-transform: uppercase;
 }
 
@@ -105,6 +122,9 @@
 	font-weight: bolder;
 }
 
+.image-margin {
+	margin-right:6px
+}
 
 .hidden {
 	display: none;
@@ -115,3 +135,4 @@
 		display: none;
 	}
 }
+

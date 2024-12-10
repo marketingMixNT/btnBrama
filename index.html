@@ -14,17 +14,10 @@
 <body style="position: relative; background-color: red;height:1500px">
 
 
-
-
-
-
-
-
-
-    <div class="btn-container entry">
+    <div class="btn-container  entry">
         <button class="buy-now-btn btn--entry">
             <a class="btn-link" href="https://bramawgorce.com/kup-bilet">
-                <img src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/main/cart.png" alt="">
+                <img src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/refs/heads/main/cart-second.png" alt="" style=>
                 <div class="text-container ">
 
                     <span class="lang-text--bold"></span><span class="lang-text"></span>
@@ -34,10 +27,10 @@
         </button>
     </div>
 
-    <div class="btn-container entry--second">
-        <button class="buy-now-btn btn--entry btn--entry--second">
+    <div class="btn-container btn-container-second entry--second">
+        <button class="buy-now-btn buy-group-btn btn--entry btn--entry--second">
             <a class="btn-link" href="https://bramawgorce.com/kup-bilet">
-                <img src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/main/cart.png" alt="">
+                <img src="  https://raw.githubusercontent.com/marketingMixNT/btnBrama/main/cart.png" alt="" class="image-margin">
                 <div class="text-container ">
 
                     <span class="lang-text--bold--second"></span><span class="lang-text--second"></span>
@@ -46,13 +39,7 @@
             </a>
         </button>
     </div>
-
-
-
-
-
-
-
+  
 
 
     <script>
@@ -100,7 +87,7 @@
                 break;
             default:
                 langTextBold.innerHTML = 'Kup';
-                langText.innerHTML = 'Teraz';
+                langText.innerHTML = 'Bilet';
 
                 langTextBoldSecond.innerHTML = 'Bilety';
                 langTextSecond.innerHTML = 'Grupowe';
@@ -113,6 +100,15 @@
         const btnBig = document.querySelector(".btn--big");
         const btnSmall = document.querySelector(".btn--small");
 
+        const containerSecond = document.querySelector('.btn-container-second')
+        const btnSecond = document.querySelector(".buy-group-btn");
+        const iconSecond = document.querySelector('.buy-group-btn img')
+        const textSecond = document.querySelector('.buy-group-btn .text-container')
+        const btnBigSecond = document.querySelector(".btn--big");
+        const btnSmallSecond = document.querySelector(".btn--small");
+
+        
+
         const checkScreenWidth = () => {
             return window.innerWidth >= 500;
         }
@@ -120,12 +116,20 @@
         const updateImageSize = () => {
             if (checkScreenWidth()) {
                 if (window.scrollY > 100) {
+
                     container.classList.remove('entry')
                     container.classList.add('scroll')
                     btn.classList.remove('btn--entry')
                     btn.classList.add('btn--scroll')
                     icon.classList.add('hidden')
                     text.classList.add('text-scroll')
+
+                    containerSecond.classList.remove('entry--second')
+                    containerSecond.classList.add('scroll--second')
+                    btnSecond.classList.remove('btn--entry--second')
+                    btnSecond.classList.add('btn--scroll--second')
+                    iconSecond.classList.add('hidden')
+                    textSecond.classList.add('text-scroll')
 
                 } else {
                     container.classList.add('entry')
@@ -135,6 +139,12 @@
                     icon.classList.remove('hidden')
                     text.classList.add('remove')
 
+                    containerSecond.classList.add('entry--second')
+                    containerSecond.classList.remove('scroll--second')
+                    btnSecond.classList.add('btn--entry--second')
+                    btnSecond.classList.remove('btn--scroll--second')
+                    iconSecond.classList.remove('hidden')
+                    textSecond.classList.add('remove')
                 }
             }
         }
