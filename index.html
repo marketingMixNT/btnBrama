@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -9,15 +9,22 @@
     <!--TO DO HEAD-->
     <link rel="stylesheet" href="style.css">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
 </head>
 
-<body style="position: relative; background-color: red;height:1500px">
+<body style="position: relative; background-color: rebeccapurple;height:1500px;">
 
 
     <div class="btn-container  entry">
         <button class="buy-now-btn btn--entry">
-            <a class="btn-link" href="https://bramawgorce.com/kup-bilet">
-                <img src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/refs/heads/main/cart-second.png" alt="" style=>
+            <a class="btn-link lang-link" href="">
+                <img src="https://raw.githubusercontent.com/marketingMixNT/btnBrama/refs/heads/main/cart-second.png"
+                    alt="" style=>
                 <div class="text-container ">
 
                     <span class="lang-text--bold"></span><span class="lang-text"></span>
@@ -27,10 +34,12 @@
         </button>
     </div>
 
+
     <div class="btn-container btn-container-second entry--second">
         <button class="buy-now-btn buy-group-btn btn--entry btn--entry--second">
-            <a class="btn-link" href="https://bramawgorce.com/kup-bilet">
-                <img src="  https://raw.githubusercontent.com/marketingMixNT/btnBrama/main/cart.png" alt="" class="image-margin">
+            <a class="btn-link lang-link--second" href="">
+                <img src="  https://raw.githubusercontent.com/marketingMixNT/btnBrama/main/cart.png" alt=""
+                    class="image-margin">
                 <div class="text-container ">
 
                     <span class="lang-text--bold--second"></span><span class="lang-text--second"></span>
@@ -39,7 +48,7 @@
             </a>
         </button>
     </div>
-  
+
 
 
     <script>
@@ -49,48 +58,65 @@
         const langTextBold = document.querySelector('.lang-text--bold')
         const langTextSecond = document.querySelector('.lang-text--second')
         const langTextBoldSecond = document.querySelector('.lang-text--bold--second')
-      
+        const langLink = document.querySelector('.lang-link')
+        const langLinkSecond = document.querySelector('.lang-link--second')
+
 
 
         switch (lang) {
             case 'en':
                 langTextBold.innerHTML = 'Buy';
                 langText.innerHTML = 'Now';
+                langLink.href = 'https://www.bramawgorce.com/en/buy-ticket';
 
                 langTextBoldSecond.innerHTML = 'Group';
                 langTextSecond.innerHTML = 'Tickets';
-               
+                langLinkSecond.href = 'https://www.bramawgorce.com/en/buy-ticket';
+
                 break;
             case 'sk':
                 langTextBold.innerHTML = 'Kúpte';
                 langText.innerHTML = 'teraz';
+                langLink.href = 'https://www.bramawgorce.com/sk/kupit-vstupenku';
 
                 langTextBoldSecond.innerHTML = 'Skupinové';
                 langTextSecond.innerHTML = 'lístky';
+                langLinkSecond.href = 'https://www.bramawgorce.com/sk/kupit-vstupenku';
+
 
                 break;
             case 'hu':
                 langTextBold.innerHTML = 'Vásárolj';
                 langText.innerHTML = 'most';
+                langLink.href = 'https://www.bramawgorce.com/hu/jegyvasarlas';
 
                 langTextBoldSecond.innerHTML = 'Csoportos';
                 langTextSecond.innerHTML = 'jegyek';
+                langLinkSecond.href = 'https://www.bramawgorce.com/hu/jegyvasarlas';
+
 
                 break;
             case 'uk':
                 langTextBold.innerHTML = 'купити';
                 langText.innerHTML = 'зараз';
+                langLink.href = 'https://www.bramawgorce.com/uk/kupiti-kvitok';
+
 
                 langTextBoldSecond.innerHTML = 'Групові';
                 langTextSecond.innerHTML = 'квитки';
+                langLinkSecond.href = 'https://www.bramawgorce.com/uk/kupiti-kvitok';
+
 
                 break;
             default:
                 langTextBold.innerHTML = 'Kup';
                 langText.innerHTML = 'Bilet';
+                langLink.href = 'https://bramawgorce.com/kup-bilet';
 
                 langTextBoldSecond.innerHTML = 'Bilety';
                 langTextSecond.innerHTML = 'Grupowe';
+                langLinkSecond.href = 'https://bramawgorce.com/kup-bilet';
+
         }
 
         const container = document.querySelector('.btn-container')
@@ -107,7 +133,7 @@
         const btnBigSecond = document.querySelector(".btn--big");
         const btnSmallSecond = document.querySelector(".btn--small");
 
-        
+
 
         const checkScreenWidth = () => {
             return window.innerWidth >= 500;
